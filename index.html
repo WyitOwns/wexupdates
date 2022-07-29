@@ -1,2 +1,31 @@
-import os
-print("the update")
+import os,time,requests,rich,sys,shutil
+
+def fs():
+	e=str(os.get_terminal_size()).replace("os.terminal_size(columns=","").replace(" lines=","").replace(")","").split(",")[0]
+	for i in range(int(e)):
+		print("█",end="")
+	print()
+def cls():
+	e="ear"
+	if os.name == "nt":
+		e="s"
+	os.system("cl"+e)
+upd=open("wex/sys20/upd").read()
+prc=0
+for i in range(100):
+	time.sleep(0.1)
+	prc+=1
+	print("   - loading wexOS: "+str(prc)+"%",end="\r")
+def updi():
+	prc=0
+	for i in range(100):
+		time.sleep(0.1)
+		prc+=1
+		print("   - updating wexOS: "+str(prc)+"%",end="\r")
+	rich.print("your free now!!!!!")
+def main():
+	print("sosig")
+if upd == "1":
+	updi()
+else:
+	main()
