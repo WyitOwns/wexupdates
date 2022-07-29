@@ -15,13 +15,15 @@ prc=0
 for i in range(100):
 	time.sleep(0.1)
 	prc+=1
-	print("   - loading wexOS: "+str(prc)+"%",end="\r")
+	print("   - loading wexOS: "+str(prc)+"% ",end="\r")
 def updi():
+	with open("wex/sys20/upd","w") as f:
+		f.writelines("0")
 	prc=0
 	for i in range(100):
 		time.sleep(0.1)
 		prc+=1
-		print("   - updating wexOS: "+str(prc)+"%",end="\r")
+		print("   - updating wexOS: "+str(prc)+"%  ",end="\r")
 	rich.print("your free now!!!!!")
 def main():
 	print("sosig")
